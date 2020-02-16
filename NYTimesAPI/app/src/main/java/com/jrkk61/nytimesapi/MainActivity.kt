@@ -1,11 +1,7 @@
 package com.jrkk61.nytimesapi
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-
-
-import kotlinx.android.synthetic.main.activity_main.*
+import com.jrkk61.nytimesapi.R
 
 class MainActivity : AppCompatActivity() {
 
