@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 package com.jrkk61.nytimesapi
 
@@ -108,3 +109,18 @@ import java.util.*
     }
 
 }
+=======
+package com.jrkk61.nytimesapi
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.jrkk61.nytimesapi.R
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+    }
+}
+>>>>>>> e301c2208c3ed350042d9d4a6b36d339dcd01603
