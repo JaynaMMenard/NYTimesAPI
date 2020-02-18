@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\jayna\\MobileA\\NYTimesAPI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jayna\\.gradle\\caches\\transforms-2\\files-2.1\\4cea45bd005ddf160f2992f5d484b3c7\\core-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\jayna\\.gradle\\caches\\transforms-2\\files-2.1\\bae7331f976f74259670168747ceeffe\\core-1.3.0-alpha01\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jayna\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\jayna\\.gradle\\caches\\transforms-2\\files-2.1\\a3dd40076fb1aa4032dab9e86677200c\\appcompat-1.0.2\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

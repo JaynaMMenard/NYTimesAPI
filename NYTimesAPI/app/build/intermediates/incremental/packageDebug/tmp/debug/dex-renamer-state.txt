@@ -1,4 +1,4 @@
-#Fri Feb 14 13:01:32 EST 2020
+#Tue Feb 18 00:42:51 EST 2020
 base.0=C\:\\Users\\jayna\\MobileA\\NYTimesAPI\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

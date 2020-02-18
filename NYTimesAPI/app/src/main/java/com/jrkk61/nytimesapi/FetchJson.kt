@@ -1,26 +1,42 @@
 package com.jrkk61.nytimesapi
 
-import okhttp3.*
-import java.io.IOException
+import androidx.lifecycle.MutableLiveData
+import com.jrkk61.nytimesapi.NYTService.retrofit
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-fun fetchJson(){
-        println("Fetching Json")
-        val url = "https://api.nytimes.com/svc/topstories/v2/us.json?api-key=5Juyps8ID6qTGAC1bcsuk00GB6RfOzer"
-        val request = Request.Builder().url(url).build()
-
-        val client = OkHttpClient()
-        client.newCall(request).enqueue(object : Callback {
-
-            override fun onResponse(call: Call, response: Response) {
-              val body = response.body()?.string() //To change body of created functions use File | Settings | File Templates.
-                println(body)
-            }
-            override fun onFailure(call: Call, e: IOException) {
-               println("Failed") //To change body of created functions use File | Settings | File Templates.
+internal class FetchJson private constructor() {
+    private val anInterface: Interface
+    fun getArticle(section: String?, key: String?): MutableLiveData<Section?> {
+        val articleData = MutableLiveData<Section?>()
+        anInterface.getSection(section, key)!!.enqueue(object : Callback<Section?> {
+            override fun onResponse(call: Call<Section?>, response: Response<Section?>) {
+                if (response.isSuccessful) {
+                    articleData.value = response.body()
+                }
             }
 
-
-            
+            override fun onFailure(call: Call<Section?>, t: Throwable) {
+                articleData.value = null
+            }
         })
-
+        return articleData
     }
+
+    companion object {
+        private var repository: FetchJson? = null
+
+        val instance: FetchJson?
+            get() {
+                if (repository == null) {
+                    repository = FetchJson()
+                }
+                return repository
+            }
+    }
+
+    init {
+        anInterface = retrofit!!.create(Interface::class.java)
+    }
+}
