@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 <resources>
     <string name="app_name">NYTimes</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="icon">icon</string>
 </resources>
-=======
-<resources>
-    <string name="app_name">NYTimesAPI</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="icon">image</string>
-</resources>
->>>>>>> e301c2208c3ed350042d9d4a6b36d339dcd01603
