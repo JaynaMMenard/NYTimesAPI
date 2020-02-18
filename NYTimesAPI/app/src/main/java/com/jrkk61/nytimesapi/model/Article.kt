@@ -1,3 +1,9 @@
-package com.jrkk61.nytimesapi.model
+package com.jrkk61.nytimesapi.Model
 
-data class Article(val results: List<Result>)
+class Article {
+
+    val title: String? = null
+    val abstract: String? = null
+    val url: String? = null
+
+}
