@@ -8,5 +8,5 @@ class ArticleM(
         @field:SerializedName("abstract")
         var abstract: String,
         @field:SerializedName("multimedia")
-        var multimedia: List<Multimedia>)
+        var multimedia: List<MultimediaM>)
 

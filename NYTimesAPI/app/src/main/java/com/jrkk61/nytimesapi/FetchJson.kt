@@ -6,7 +6,8 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-internal class FetchJson private constructor() {
+ class FetchJson
+ private constructor() {
     private val anInterface: Interface
     fun getArticle(section: String?, key: String?): MutableLiveData<Section?> {
         val articleData = MutableLiveData<Section?>()
@@ -29,9 +30,9 @@ internal class FetchJson private constructor() {
 
         val instance: FetchJson?
             get() {
-                if (repository == null) {
+
                     repository = FetchJson()
-                }
+
                 return repository
             }
     }

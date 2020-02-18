@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import java.util.*
+
 
 class Adapter(private val context: Context, private val articles: ArrayList<ArticleM>) : RecyclerView.Adapter<Adapter.holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): holder {
@@ -19,11 +19,9 @@ class Adapter(private val context: Context, private val articles: ArrayList<Arti
     override fun onBindViewHolder(holder: holder, position: Int) {
         holder.title.text = articles[position].title
         holder.blur.text = articles[position].abstract
-        if (articles[position].multimedia.size == 0) {
 
-        } else {
             Picasso.get().load(articles[position].multimedia[1].url).into(holder.multimedia)
-        }
+
     }
 
     override fun getItemCount(): Int {

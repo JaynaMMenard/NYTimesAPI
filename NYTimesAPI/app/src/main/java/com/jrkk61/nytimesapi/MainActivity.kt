@@ -2,32 +2,24 @@
 package com.jrkk61.nytimesapi
 
 import android.content.*
-import android.graphics.Color
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
-import com.jrkk61.nytimesapi.R
-import com.jrkk61.nytimesapi.Adapter
-import com.jrkk61.nytimesapi.ArticleM
-import com.jrkk61.nytimesapi.Section
-import com.jrkk61.nytimesapi.getArticle
 import java.util.*
 
     class MainActivity : AppCompatActivity() {
     private var adapter: Adapter? = null
     private val articles = ArrayList<ArticleM>()
     private var loading: ProgressBar? = null
-    private var snackbar: Snackbar? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -43,8 +35,7 @@ import java.util.*
         recyclerView.adapter = adapter
         recyclerView.setHasFixedSize(true)
         val v = findViewById<View>(R.id.constraint)
-        snackbar = Snackbar.make(v, "NO Internet Connection", Snackbar.LENGTH_INDEFINITE)
-                .setAction("Retry") { v1: View? -> load() }
+
 
     }
 
@@ -89,10 +80,7 @@ import java.util.*
             loading!!.visibility = View.INVISIBLE
             if (adapter!!.itemCount == 0) {
                 val v = findViewById<View>(R.id.constraint)
-                snackbar = Snackbar.make(v, "NO Internet Connection", Snackbar.LENGTH_INDEFINITE)
-                        .setAction("Retry") { v1: View? -> load() }
-                snackbar!!.setActionTextColor(Color.WHITE)
-                snackbar!!.show()
+
             }
         }
     }

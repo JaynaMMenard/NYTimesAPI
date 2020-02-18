@@ -1,5 +1,4 @@
 package com.jrkk61.nytimesapi
-import com.jrkk61.nytimesapi.Section
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
